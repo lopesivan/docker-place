@@ -1,0 +1,2 @@
+ls -i id_rsa_root ../ubuntu/id_rsa_root
+ls -i etc/rules/docker.mk ../ubuntu/etc/rules/docker.mk

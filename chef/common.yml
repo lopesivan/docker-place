@@ -1,0 +1,8 @@
+ssh:
+  build: .
+  dockerfile: Dockerfile-solo
+  command: /usr/bin/supervisord
+  ports:
+    - "22"
+  environment:
+    - DEBUG=false

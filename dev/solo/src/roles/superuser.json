@@ -1,0 +1,31 @@
+{
+  "name": "superuser",
+  "default_attributes": {
+    "user":{
+      "name": "root",
+      "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxULNOZLmMlR3WWoJn/RU8YsWCYgjCKo/h+cxW3PkBqQYbiSrTAXU2uv6t2a3r1pL/XIfXoxVXj+1wDGspebg2iuo6VKevALL73Hjvl50YO5ZZzGKLaInwu9Fgyrt8po1EyChiBE4XbxvtB8ENMAFNPKaghMIhhVgwQpmFqv3C/4njSu7jGT87XnNkEtGKDNWqTEm/BmnMIH9Lz2W4HAq7xqvwxyD2+GAneoCFRVFxhmAPCS0I9orjmFWHhlfB9QkqeC1v1W4jzIrKflR/klR6/H42Fp8bodcYJqBUMaxVI7FTPetv5YNiZyjWKRhTCpXt6RExFaGB9BJUh81Wud7P",
+      "authorized_keys": "/root/.ssh/authorized_keys"
+    },
+    "openssh": {
+      "server": {
+        "port": 22,
+        "protocol": 2,
+        "use_privilege_separation": "yes",
+        "ignore_rhosts": "yes",
+        "permit_root_login": "yes",
+        "password_authentication": "no",
+        "permit_empty_passwords": "no"
+      }
+    }
+  },
+  "override_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "The base role for root user with ssh",
+
+  "chef_type": "role",
+
+  "run_list": [
+    "recipe[root::default]",
+    "recipe[openssh]"
+  ]
+}

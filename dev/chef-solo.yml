@@ -1,0 +1,5 @@
+solo:
+  extends:
+    file: ./development.yml
+    service: solo
+  container_name: chef-solo

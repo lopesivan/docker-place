@@ -1,0 +1,25 @@
+{
+    "README.md":            { "type": "readme"      },
+    "Dockerfile":           {
+      "type": "docker",
+      "make": "make build"
+    },
+    "Makefile":             {
+      "type": "make",
+      "make": "make ls"
+    },
+    "src/users/*.md":       {
+      "type":     "users"
+    },
+    "*.mk":                 { "type": "make"        },
+    "*.sh":                 { "type": "bash"        },
+    "src/supervisord.conf": { "type": "svisord"     },
+    "src/cookbooks/*":      { "type": "cookbooks"   },
+    "src/data_bags/*.json": { "type": "bags"        },
+    "src/keys/*":           { "type": "keys"        },
+    "src/nodes/*.json":     { "type": "nodes"       },
+    "src/pem/*":            { "type": "pem"         },
+    "src/roles/*.json":     { "type": "roles"       },
+    "src/scripts/*":        { "type": "scripts"     },
+    "src/site-cookbooks/*": { "type": "site"        }
+}

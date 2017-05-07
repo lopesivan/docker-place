@@ -1,0 +1,2 @@
+#git clone file://${HOME}/git/dev.git
+#git remote add origin file://${HOME}/git/dev.git

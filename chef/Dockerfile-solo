@@ -1,0 +1,26 @@
+FROM ubuntu_server:latest
+MAINTAINER Ivan Lopes <ivan@42algoritmos.com.br>
+
+# chef-base
+# ---------
+# adding local file
+ADD ./chef_12.19.36-1_amd64.deb /tmp/chef_12.19.36-1_amd64.deb
+
+# Install Chef
+RUN set -x \
+    && buildDeps='build-essential libxml2-dev libxslt-dev ruby ruby-dev autoconf' \
+    && chefDeb='/tmp/chef_12.19.36-1_amd64.deb' \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends $buildDeps \
+    && dpkg -i $chefDeb \
+    && echo "gem: --no-ri --no-rdoc" > ~/.gemrc \
+    && apt-get -y autoremove \
+    && apt-get clean \
+    && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/* $chefDeb
+
+# Install Berkshelf with chef's own ruby
+ENV GEM /opt/chef/embedded/bin/gem
+RUN $GEM install berkshelf
+
+# chef-solo plugin
+RUN $GEM install knife-solo_data_bag

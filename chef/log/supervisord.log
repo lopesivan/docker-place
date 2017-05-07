@@ -1,0 +1,25 @@
+2017-03-27 08:05:03,417 CRIT Supervisor running as root (no user in config file)
+2017-03-27 08:05:03,417 WARN Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2017-03-27 08:05:03,542 INFO RPC interface 'supervisor' initialized
+2017-03-27 08:05:03,542 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-03-27 08:05:03,542 INFO supervisord started with pid 1
+2017-03-27 08:05:04,545 INFO spawned: 'sshd' with pid 9
+2017-03-27 08:05:05,547 INFO success: sshd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-03-27 08:06:01,247 CRIT reaped unknown pid 11)
+2017-03-27 08:06:35,174 CRIT reaped unknown pid 13)
+2017-03-27 08:07:53,503 CRIT reaped unknown pid 15)
+2017-03-27 08:08:41,503 CRIT reaped unknown pid 17)
+2017-03-27 08:11:15,902 CRIT reaped unknown pid 19)
+2017-03-27 08:12:03,316 WARN received SIGINT indicating exit request
+2017-03-27 08:12:03,317 INFO waiting for sshd to die
+2017-03-27 08:12:03,348 INFO stopped: sshd (exit status 0)
+2017-03-27 08:21:59,768 CRIT Supervisor running as root (no user in config file)
+2017-03-27 08:21:59,768 WARN Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2017-03-27 08:21:59,799 INFO RPC interface 'supervisor' initialized
+2017-03-27 08:21:59,799 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-03-27 08:21:59,800 INFO supervisord started with pid 1
+2017-03-27 08:22:00,802 INFO spawned: 'sshd' with pid 9
+2017-03-27 08:22:01,804 INFO success: sshd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-03-27 08:24:48,125 WARN received SIGINT indicating exit request
+2017-03-27 08:24:48,125 INFO waiting for sshd to die
+2017-03-27 08:24:48,127 INFO stopped: sshd (exit status 0)

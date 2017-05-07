@@ -1,2 +1,1 @@
-# docker-place
-Modelo docker de projeto
+doc/README.pt_br

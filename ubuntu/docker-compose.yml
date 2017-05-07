@@ -1,0 +1,8 @@
+server:
+  extends:
+    file: common.yml
+    service: ssh
+  container_name: ubuntu-server
+  volumes:
+    - ./workspace:/root/workspace
+    - ./log:/var/log/supervisor

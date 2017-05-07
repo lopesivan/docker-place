@@ -1,0 +1,7 @@
+ssh:
+  build: .
+  command: /usr/bin/supervisord
+  ports:
+    - "22"
+  environment:
+    - DEBUG=false

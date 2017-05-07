@@ -1,0 +1,9 @@
+solo:
+  extends:
+    file: common.yml
+    service: ssh
+  container_name: chef-solo
+  volumes:
+   - ./workspace:/root/workspace
+   - ./log:/var/log/supervisor
+

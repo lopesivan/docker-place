@@ -1,0 +1,11 @@
+solo:
+  build: ./solo
+  command: /usr/bin/supervisord
+  volumes:
+   - ./src/cookbooks:/var/chef/cookbooks
+   - ./src/site-cookbooks:/var/chef/site-cookbooks
+   - ./workspace:/workspace
+  ports:
+   - "22"
+  hostname: dev
+  domainname: solo.com
